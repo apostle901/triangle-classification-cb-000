@@ -6,7 +6,7 @@ class Triangle
   end
 
   def kind
-    if any_zeros? || !triangle_notouch?
+    if any_zeros? || triangle_notouch?
       raise TriangleError
     else
       return :equilateral if @size_a == @size_b && @size_b == @size_c
