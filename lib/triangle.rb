@@ -19,8 +19,8 @@ class Triangle
     @size_a <= 0 || @size_b <= 0 || @size_c <= 0
   end
 
-  def triangle_touch?
-    (@size_a + @size_b > @size_c) && (@size_a + @size_c > @size_b) && (@size_b + @size_c > @size_a)
+  def triangle__notouch?
+    (@size_a + @size_b <= @size_c) || (@size_a + @size_c <= @size_b) || (@size_b + @size_c <= @size_a)
   end
 end
 
