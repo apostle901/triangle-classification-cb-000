@@ -6,12 +6,16 @@ class Triangle
   end
 
   def kind
-    return :equilateral if @size_a == @size_b && @size_b == @size_c
-    return :isosceles if @size_a == @size_b || @size_a == @size_c || @size_b == @size_c
-    :scalene
+    if @size_a <= 0 || @size_b <= 0 || @size_c <= 0
+      raise TriangleError
+    else
+      return :equilateral if @size_a == @size_b && @size_b == @size_c
+      return :isosceles if @size_a == @size_b || @size_a == @size_c || @size_b == @size_c
+      :scalene
+    end
   end
-end
 
-class TriangleError < StandardError
- # triangle error code
+  class TriangleError < StandardError
+   # triangle error code
+  end
 end
