@@ -7,5 +7,6 @@ class Triangle
 
   def kind
     return :equilateral if @size_a == @size_b && @size_b == @size_c
+    return :isosceles if @size_a == @size_b || @size_a == @size_c || @size_b == @size_c
   end
 end
